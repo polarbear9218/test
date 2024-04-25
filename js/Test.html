@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>选择商品规格</title>
+<style>
+.selected {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h2>商品</h2>
+<div id="productButtons">
+    <!-- 按钮用于选择颜色 -->
+    <div id="colorOptions"></div>
+    <br>
+    <!-- 按钮用于选择容量 -->
+    <div id="capacityOptions"></div>
+    <!-- 显示商品信息 -->
+    <div id="productInfo"></div>
+</div>
+
+<script>
+// 从 API 获取商品信息
+async function getProductInfo(ItemId) {
+    try {
+        const response = await fetch(`http://localhost:5193/api/Paradise/ProductInfo?ItemId=${ItemId}`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        if (data.Status === 200 && data.Message.length > 0) {
+            return data.Message; // 返回商品信息数组
+        } else {
+            throw new Error('Product info not found');
+        }
+    } catch (error) {
+        console.error('Failed to fetch product info:', error);
+        return null;
+    }
+}
+
+async function generateColorOptions(ItemId) {
+    try {
+        const productInfo = await getProductInfo(ItemId);
+        console.log('Product info:', productInfo); // 调试语句
+        const colorOptionsDiv = document.getElementById('colorOptions');
+        colorOptionsDiv.innerHTML = ''; // 清空原有的选项
+        const colors = new Set(); // 用於存儲不重複的顏色
+        productInfo.forEach(item => {
+            colors.add(item.Color); // 將所有顏色添加到集合中
+        });
+        // 將集合轉換為陣列並生成按鈕
+        Array.from(colors).forEach((color, index) => {
+            const button = document.createElement('button');
+            button.textContent = color;
+            button.dataset.color = color;
+            button.classList.add('colorButton');
+            if (index === 0) {
+                button.classList.add('selected');
+            }
+            button.addEventListener('click', async function() {
+                const selectedColor = this.dataset.color;
+                const spaceOptionsDiv = document.getElementById('capacityOptions');
+                spaceOptionsDiv.innerHTML = ''; // 清空原有的选项
+                productInfo.forEach(info => {
+                    if (info.Color === selectedColor) {
+                        const button = document.createElement('button');
+                        button.textContent = info.Space;
+                        button.dataset.capacity = info.Space;
+                        button.classList.add('capacityButton');
+                        button.addEventListener('click', async function() {
+                            const selectedCapacity = this.dataset.capacity;
+                            const format = productInfo.find(info => info.Color === selectedColor && info.Space === selectedCapacity);
+                            if (format) {
+                                document.getElementById('productInfo').textContent = `ItemId: ${format.ItemId}, FormatId: ${format.FormatId}, 价格: ${format.ItemPrice}`;
+                            }
+                            spaceOptionsDiv.querySelectorAll('.capacityButton').forEach(btn => {
+                                btn.classList.remove('selected');
+                            });
+                            this.classList.add('selected');
+                        });
+                        spaceOptionsDiv.appendChild(button);
+                    }
+                });
+                document.getElementById('productInfo').textContent = ''; // 清空商品信息
+                document.querySelectorAll('.colorButton').forEach(btn => {
+                    btn.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+            colorOptionsDiv.appendChild(button);
+        });
+    } catch (error) {
+        console.error('Failed to fetch product info:', error);
+    }
+}
+
+// 初始化页面，根据 ItemId 加载商品信息和选项
+window.onload = function() {
+    //從URL中獲取ItemId
+    //const urlParams = new URLSearchParams(window.location.search);
+    //const ItemId = urlParams.get('ItemId');
+    const ItemId = '6';
+    generateColorOptions(ItemId);
+};
+</script>
+</body>
+</html>

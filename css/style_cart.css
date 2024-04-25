@@ -1,0 +1,295 @@
+/* 預設 *//* #region */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Microsoft JhengHei';    
+}
+
+body{
+    background-color: #FEFDF7;
+}
+
+a{
+    text-decoration: none;
+    color: #4c5f79;
+}
+
+/* #endregion */
+
+
+/* header *//*#region*/
+
+header{
+    background-color: #98B5D1;
+    padding: 0px 13%;
+    display: flex;  
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;  
+    position: sticky;
+    top:0; 
+    z-index: 50;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+}
+
+/* nav */
+
+.nav_main{
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav_main a:hover{
+    background-color: #5f7e99;
+}
+
+
+/* 首頁/產品一覽 */
+.nav{
+    display: flex; 
+    align-items: center;
+    flex-direction: column;  
+    color: white;
+    padding:0 5px;      
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav img{
+    width: 30px; 
+    height: 30px; 
+    padding: 5px;
+}
+
+.nav a{
+    width: 90px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+/* line/購物車/會員 */
+.nav2 a{
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.nav2 img{
+    width: 30px; 
+    height: 30px; 
+    padding: 3px;
+}
+
+/*#endregion*/
+
+
+/* 路徑 *//*#region*/
+
+.path{
+    display: flex;
+    padding: 1px 13%;
+    margin-bottom: 0;
+    background-color: #e6eeef;
+    position: sticky;
+    top:91px; 
+    z-index: 50;       
+}
+
+.path p{
+    margin: 5px;
+    margin-bottom: 10px;
+    color: rgb(137, 139, 142);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.path a{
+    margin: 5px;
+    margin-bottom: 10px;
+    color: rgb(80, 119, 158);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.path a:hover{
+    color: #8bb5c2;
+}
+
+/*#endregion*/
+
+
+
+#main{
+    margin: 50px 15%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #bec0c1; 
+}
+
+
+/* title *//* #region */
+
+.main_title{
+    margin: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    font-size: 28px;
+    font-weight: bolder;
+    border-bottom: solid #c4d5e1 5px;
+    color:#4e657a;
+}
+
+.main_title p{
+    padding: 10px 30px;
+}
+
+.main_title img{
+    width: 60px; 
+    height: 60px; 
+    padding:5px 15px;
+}
+
+/*#endregion*/
+
+
+/* 購物車內容 *//* #region */
+
+
+    .main{
+        padding:40px 13%;
+    }
+
+    /* 商品資料 */
+    .content{
+        font-weight: bolder;
+        line-height: 40px;
+        margin:0px 50px;
+        padding:20px 50px;
+        font-size: 20px;
+        color:#556d82;
+        border-bottom:solid #8bb5c2 1px;
+    }
+
+    .content p , .content a{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 15px;
+    }
+
+    .content img{
+        width: 25px;
+    }
+
+    h2{
+        margin:30px 10%;
+        color: #4e657a;
+    }
+
+    #button{
+        text-align: center;
+        margin:15px 40%;
+        padding: 10px 35px;
+        background-color: white;
+        color: #4c5f79;
+        font-weight: bolder;
+        border: solid #ccdbe7 2px;
+        border-radius: 50px; 
+        font-size: 18px;   
+    }
+
+    #button:hover{
+        background-color: #97a7c5;
+        color: white;
+    }
+
+/*#endregion*/
+
+
+/* 結帳頁面 *//* #region */
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 會員資料 */
+    .user_content{
+        font-weight: bolder;
+        line-height: 60px;
+        margin:10px 50px 30px 50px;
+        padding:0px 50px;
+        font-size: 20px;
+        color:#556d82;
+    }
+
+    /* 地址輸入框 */
+    .text{
+        width: 70%;
+        padding: 10px;
+        margin: 15px;
+        border:solid 1px #a3b1c5;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    #checkout_button{
+        display: flex;
+        justify-content: center;
+        margin:10px 45% 50px 45%;
+        padding: 10px 35px;
+        background-color: white;
+        color: #4c5f79;
+        font-weight: bolder;
+        border: solid #ccdbe7 2px;
+        border-radius: 50px; 
+        font-size: 18px;   
+    }
+
+    #checkout_button:hover{
+        background-color: #97a7c5;
+        color: white;
+    }
+
+    .user{
+        display: flex;
+    }
+
+/*#endregion*/
+
+
+/* footer */
+footer{
+    background-color: #98B5D1;
+    padding: 18px 15%;
+    display: flex;
+    justify-content: center;  
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}

@@ -1,0 +1,483 @@
+/* 預設 *//* #region */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Microsoft JhengHei';    
+}
+
+body{
+    background-color: #FEFDF7;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #endregion */
+
+
+/* header *//*#region*/
+
+header{
+    background-color: #98B5D1;
+    padding: 0px 13%;
+    display: flex;  
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;  
+    position: sticky;
+    top:0; 
+    z-index: 50;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+}
+
+/* nav */
+
+.nav_main{
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav_main a:hover{
+    background-color: #5f7e99;
+}
+
+
+/* 首頁/產品一覽 */
+.nav{
+    display: flex; 
+    align-items: center;
+    flex-direction: column;  
+    color: white;
+    padding:0 5px;      
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav img{
+    width: 30px; 
+    height: 30px; 
+    padding: 5px;
+}
+
+.nav a{
+    width: 90px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+/* line/購物車/會員 */
+.nav2 a{
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.nav2 img{
+    width: 30px; 
+    height: 30px; 
+    padding: 3px;
+}
+
+/*#endregion*/
+
+
+/* 路徑 *//*#region*/
+
+.path{
+    display: flex;
+    padding: 1px 13%;
+    margin-bottom: 0;
+    background-color: #e6eeef;
+    position: sticky;
+    top:91px; 
+    z-index: 50;       
+}
+
+.path p{
+    margin: 5px;
+    margin-bottom: 10px;
+    color: rgb(137, 139, 142);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.path a{
+    margin: 5px;
+    margin-bottom: 10px;
+    color: rgb(80, 119, 158);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.path a:hover{
+    color: #8bb5c2;
+}
+
+/*#endregion*/
+
+
+/* 頁籤 *//*#region*/
+
+    #main{
+        margin: 80px 13% 0px 13%;     
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .title{
+        padding: 15px 40px;
+        background-color: #c2d6e5;
+        margin-right: 80px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        color: white;
+    }
+
+    .title:hover{
+        background-color: rgb(165, 205, 238);
+    }
+
+    .title_white{
+        padding: 13px 50px;
+        background-color: white;
+        margin-right: 80px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border: #d2d9e2 2px solid;
+        border-bottom: 0;
+        z-index: 1;
+    }
+
+    .title_white h2{    
+        color: #4c5f79;
+    }
+
+    .button2{
+        text-align: center;
+        padding: 5px 20px;
+        background-color: white;
+        color: #4c5f79;
+        font-weight: bolder;
+        border: solid #ccdbe7 2px;
+        border-radius: 50px; 
+        font-size: 18px;   
+    }
+
+    .button2:hover{
+        background-color: #97a7c5;
+        color: white;
+    }
+
+    .buttonOK{
+        text-align: center;
+        padding: 5px 20px;
+        background-color: white;
+        color: #4c5f79;
+        font-weight: bolder;
+        border: solid #ccdbe7 2px;
+        border-radius: 50px; 
+        font-size: 18px;   
+    }
+
+    .buttonOK:hover{
+        background-color: #97a7c5;
+        color: white;
+    }
+    .buttonOK{
+        text-align: center;
+        padding: 5px 20px;
+        background-color: white;
+        color: #4c5f79;
+        font-weight: bolder;
+        border: solid #ccdbe7 2px;
+        border-radius: 50px; 
+        font-size: 18px;   
+    }
+
+    .buttonOK:hover{
+        background-color: #97a7c5;
+        color: white;
+    }
+    .buttonOK_not{
+        text-align: center;
+        padding: 5px 20px;
+        background-color: white;
+        color: #97a7c5;
+        opacity: 0.7;
+        font-weight: bolder;
+        border: solid #ccdbe7 2px;
+        border-radius: 50px; 
+        font-size: 18px;   
+    }   
+/*#endregion*/
+
+
+/* 內容 *//*#region*/
+
+#content{
+    margin: 0 15% 90px 15%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    min-height: 500px;
+    box-shadow: 2px 2px 8px #7f91a0;
+}
+
+#content2{
+    margin: 0 15% 90px 15%;
+    width: 65%;
+    border-radius: 20px;
+    background-color: white;
+    min-height: 500px;
+    box-shadow: 2px 2px 8px #7f91a0;
+}
+
+h3{
+    font-size: 20px;
+    color: #7f91a0;
+}
+
+/*#endregion*/
+
+
+/* 內標題 *//*#region*/
+
+    .main_title{
+        margin: 25px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        font-weight: bolder;
+        color:#4e657a;
+    }
+
+    .main_title p{
+        padding: 0px 30px;
+    }
+
+    .main_title img{
+        width: 60px; 
+        height: 60px; 
+        padding:5px 15px;
+    }
+
+/*#endregion*/
+
+
+/* 訂單資訊表格 *//*#region*/
+
+    #all{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #all2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table{
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        border: hidden;
+    }
+
+    table th{
+        border: none;
+        padding: 15px 60px;
+        text-align: center;
+        font-size: 20px;
+        color: #4c5f79;
+        border-top: 3px #d5e6ec solid;
+        border-bottom: 3px #d5e6ec solid;
+    }
+
+    table td{
+        padding: 25px 1%;
+        text-align: center;
+        color: #4c5f79;
+        font-weight: bolder;
+        border-bottom: 1px solid #8bb5c2;
+    }
+
+/*#endregion*/
+
+
+/* 會員資料內容 *//*#region*/
+
+    #member{
+        margin: 10px 5%;
+        padding: 20px 15%;
+        border-top: solid #c4d5e1 5px;
+    }
+
+    /* 欄位內容 */
+    .member{
+        margin: 25px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .member p{
+        margin: 10px;
+        font-size: 18px;
+        font-weight: bolder;
+        color: #51687a;
+    }
+
+    .member img{
+        width: 10px;
+        height: 10px;
+        margin: 15px;
+    }
+
+/*#endregion*/
+
+
+/* 修改密碼內容 *//*#region*/
+
+    /* 欄位內容 */
+    .password{
+        margin: 25px 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 輸入框設定 */
+    .text{
+        width: 80%;
+        padding: 10px;
+        margin: 15px;
+        border:solid 1px #a3b1c5;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .button{
+        text-align: center;
+        margin:15px 35%;
+        padding: 10px 50px;
+        background-color: white;
+        color: #4c5f79;
+        font-weight: bolder;
+        border: solid #ccdbe7 2px;
+        border-radius: 50px; 
+        font-size: 18px;   
+    }
+
+    .button:hover{
+        background-color: #97a7c5;
+        color: white;
+    }
+
+/*#endregion*/
+
+
+/* #region 彈跳視窗 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* 半透明黑色背景 */
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 居中显示 */
+    padding:30px 50px;
+    border: 1px solid #888;
+    width: 80%; /* 设置弹窗宽度 */
+    max-width: 600px; /* 最大宽度 */
+    max-height: 80%; /* 最大高度 */
+    overflow-y: auto; /* 当内容超过最大高度时，允许垂直滚动 */
+}
+
+.modal-content h2{
+    color: #7a5e51;
+    padding: 10px;
+}
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* #endregion  */
+
+/* #region 彈跳視窗_內容 */
+.create{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#field1{
+    font-size: 20px;
+    font-weight: bold;
+    color: #4e6172;
+    margin-right: 10px;
+}
+#field2{
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1.5px solid #bdb5b5;
+    border-radius: 5px;
+}
+/* #endregion  */
+
+/* footer */
+
+footer{
+    background-color: #98B5D1;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;  
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}

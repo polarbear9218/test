@@ -1,0 +1,105 @@
+
+/* 預設 *//* #region */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Microsoft JhengHei';    
+}
+
+
+a{
+    text-decoration: none;
+    color: #4c5f79;
+}
+
+/* #endregion */
+
+
+
+/* header *//*#region*/
+
+header{
+    background-color: #98B5D1;
+    padding: 0px 13%;
+    display: flex;  
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;  
+    position: sticky;
+    top:0; 
+    z-index: 50;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+}
+
+/* nav */
+
+.nav_main{
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav_main a:hover{
+    background-color: #5f7e99;
+}
+
+
+/* 首頁/產品一覽 */
+.nav{
+    display: flex; 
+    align-items: center;
+    flex-direction: column;  
+    color: white;
+    padding:0 5px;      
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav img{
+    width: 30px; 
+    height: 30px; 
+    padding: 5px;
+}
+
+.nav a{
+    width: 90px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+/* line/購物車/會員 */
+.nav2 a{
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.nav2 img{
+    width: 30px; 
+    height: 30px; 
+    padding: 3px;
+}
+
+/*#endregion*/
