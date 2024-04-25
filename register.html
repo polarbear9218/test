@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style_login.register.css">
+
+    <title>註冊</title>
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+
+        <!-- header左半部(logo/nav) -->
+        <div div class="header">
+            <a href="./Index.html">
+                <img src="image/logo.png" style="width: 150px; height: 60px; margin-right: 30px;">
+            </a>           
+        
+        <div class="nav_main" >
+                <div class="nav">
+                    <a href="./Index.html">
+                        <img src="image/icon_home.png" >
+                        <p>首 頁</p>
+                    </a>                        
+                </div>
+                <div class="nav">
+                    <a href="./product_all.html">
+                    <img src="image/icon_touch.png" >
+                        <p1>商品一覽</p1>  
+                    </a>                        
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 右半部(line/購物車/會員) -->
+        <div div class="header">
+            <div class="nav_main">
+                <div class="nav2">
+                    <a href="https://lin.ee/HgVNDFW"><img src="image/icon_line.png" ></a>
+                </div>
+                <div class="nav2">
+                    <a href="./cart.html"><img src="image/icon_cart.png" ></a>
+            </div>
+                <div class="nav2">
+                    <a href="./login.html">登入</a>
+                </div>
+                <div class="nav2">
+                    <a href="./register.html">註冊</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+     <!-- 登入內容 -->
+     <div id="main">
+
+        <div class="main_title">
+            <img src="image/icon_dots.png" >
+            <p>註冊</p>
+            <img src="image/icon_dots.png" >
+        </div>
+
+        <form action="/api/Member/Register" class="form" id="registerForm" method="post">
+        
+            <!-- 帳號密碼設定 -->
+            <div class="main" style="margin-bottom: 20px;">
+
+                <div class="title">
+                    <img src="image/arrow-right.png" >
+                    <p>設定會員帳號及密碼</p>      
+                </div>
+                    
+                <div class="div">
+                    <p>帳號</p>
+                    <input type="text" placeholder="請輸入帳號" class="text" name="Account1">  
+                </div>
+                    
+                <div class="div">
+                    <p>密碼</p>
+                    <input type="password" placeholder="請輸入密碼" class="text" name="Password" minlength="8">  
+                </div>
+
+            </div>
+            
+            <!-- 填寫基本資料 -->
+            <div class="main" style="border-top: solid 1px #aab6c6;">
+                
+                <div class="title">
+                    <img src="image/arrow-right.png" >
+                    <p>填寫基本資料</p> 
+                </div>            
+
+                <div class="div">
+                     <p>姓名</p>
+                    <input type="text" placeholder="請輸入姓名" class="text" name="Name">  
+                </div>
+
+                <div class="div">
+                    <p>電話號碼</p>
+                    <input type="text" placeholder="請輸入電話號碼" class="text" name="Cellphone">  
+                </div>
+
+                <div class="div">
+                    <p>電子信箱</p>
+                    <input type="email" placeholder="請輸入電子信箱" class="text" name="Email">  
+                </div>
+
+            </div>
+
+            <input type="submit" value="註冊" class="button ">
+            
+        </form>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>@2024手機樂園股份有限公司版權所有</p>
+    </footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+
+</html>

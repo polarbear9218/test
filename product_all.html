@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style_product_all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>商品一覽</title>
+
+</head>
+
+<body>
+    <!-- 回到頂部 -->
+    <div id="t"></div>
+    <div id="top">
+        <a href="#t"><img src="image/top.png" ></a>
+    </div>
+
+    <!-- header -->
+    <header>
+
+        <!-- header左半部(logo/nav) -->
+        <div div class="header">
+            <a href="./Index.html">
+                <img src="image/logo.png" style="width: 150px; height: 60px; margin-right: 30px;">
+            </a>           
+        
+        <div class="nav_main" >
+                <div class="nav">
+                    <a href="./Index.html">
+                        <img src="image/icon_home.png" >
+                        <p>首 頁</p>
+                    </a>                        
+                </div>
+                <div class="nav">
+                    <a href="./product_all.html">
+                    <img src="image/icon_touch.png" >
+                        <p1>商品一覽</p1>  
+                    </a>                        
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 右半部(line/購物車/會員) -->
+        <div div class="header">
+            <div class="nav_main">
+                <div class="nav2">
+                    <a href="https://lin.ee/HgVNDFW"><img src="image/icon_line.png" ></a>
+                </div>
+                <div class="nav2">
+                    <a href="./cart.html"><img src="image/icon_cart.png" ></a>
+            </div>
+                <div class="nav2">
+                    <a href="./login.html">登入</a>
+                </div>
+                <div class="nav2">
+                    <a href="./register.html">註冊</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 路徑 -->
+    <div class="path">
+            <a href="./Index.html" >首頁</a>
+            <p> > </p>
+            <a href="./product_all.html" >商品一覽</a>
+            <p> > </p>
+            <a href="./product_all.html" >本週新品上架</a>
+    </div>
+    
+
+    <!-- 頁面內容 -->
+    <div id="main">
+    
+        <!-- 左半部(sidebar) -->
+        <div id="sidebar">
+            
+            <a href="#t" id="ALLProduct">ALL 所有商品</a>
+            <a href="#t" id="HotProduct">TOP 熱銷商品</a>
+
+            <!-- 品牌手機 -->
+            <div id="sidebar_Brand">
+
+                <div class="sidebar_title">
+                    <img src="image/icon_dots.png" >
+                    <p>品牌手機</p>
+                    <img src="image/icon_dots.png" >
+                </div>
+
+                <ul>
+                    <li>
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="Apple">Apple</a></li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="SamSung">SAMSUNG</a></li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t"dataset="ASUS">ASUS</a></li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="OPPO">OPPO</a>
+                    </li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t"dataset="SONY" >SONY</a>
+                    </li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="vivo">vivo</a>
+                    </li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="realme">realme</a>
+                    </li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="HTC">HTC</a>
+                    </li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="Google">Google</a>
+                    </li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="小米">小米</a>
+                    </li>
+                    <li>
+                        <img src="image/arrow-right.png" >
+                        <a href="#t"dataset="NOKIA" >NOKIA</a>
+                    </li>
+                    <li> 
+                        <img src="image/arrow-right.png" >
+                        <a href="#t" dataset="HUAWEI">HUAWEI</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- 價格分類 -->
+            <div id="sidebar_Price">
+                    <div class="sidebar_title">
+                        <img src="image/icon_dots.png" >
+                        <p>價格分類</p>
+                        <img src="image/icon_dots.png" >
+                    </div>
+                    
+                    <ul>
+                        <li>
+                            <img src="image/arrow-right.png" >
+                            <a href="#t" data-MaxPrice="5000" >5,000以下</a>
+                        </li>
+                        <li>
+                            <img src="image/arrow-right.png" >
+                            <a href="#t" data-MaxPrice="10000" data-MinPrice="5000">5,000~10,000</a>
+                        </li>
+                        <li>
+                            <img src="image/arrow-right.png" >
+                            <a href="#t"data-MaxPrice="15000" data-MinPrice="10000">10,000~15,000</a>
+                        </li>
+                        <li>
+                            <img src="image/arrow-right.png" >
+                            <a href="#t" data-MaxPrice="20000" data-MinPrice="15000">15,000~20,000</a>
+                        </li>
+                        <li>
+                            <img src="image/arrow-right.png" >
+                            <a href="#t" data-MaxPrice="25000" data-MinPrice="20000">20,000~25,000</a>
+                        </li>
+                        <li>
+                            <img src="image/arrow-right.png" >
+                            <a href="#t" data-MaxPrice="30000" data-MinPrice="25000">25,000~30,000</a>
+                        </li>
+                        <li>
+                            <img src="image/arrow-right.png" >
+                            <a href="#t" data-MaxPrice="40000" data-MinPrice="30000">30,000~40,000</a>
+                        </li>
+                        <li>
+                            <img src="image/arrow-right.png" >
+                            <a href="#t" data-MinPrice="40000">40,000以上</a>
+                        </li>
+                    </ul>
+                </div>      
+                
+        </div>
+    
+
+        <!-- 右半部(產品內容) -->
+        <div id="product">
+
+            <div id="product_title">
+            <h2 style="color: rgb(96, 129, 163); font-weight: bold;"></h2>
+
+            <div>
+
+                <select id="sort">
+                    <option value="0">上架時間:由新到舊</option>
+                    <option value="1">上架時間:由舊到新</option>
+                    <option value="2">商品價格:由高至低</option>
+                    <option value="3">商品價格:由低至高</option>
+                </select>
+
+            </div>
+            
+            </div>               
+                
+            <!-- 商品 -->
+            <div id="product_show">
+        
+            </div>
+            
+            
+            <div id="page">
+            </div>
+    
+        </div>
+
+    </div>
+    
+    
+    <!-- footer -->
+    <footer>
+        <p>@2024手機樂園股份有限公司版權所有</p>
+    </footer>
+    <script src="./js/header.js"></script>
+    <script src="./js/product_all.js"></script>
+</body>
+
+</html>

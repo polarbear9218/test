@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style_product.css">
+
+
+    <title>商品</title>
+
+</head>
+
+<body>
+
+    <!-- 回到頂部 -->
+    <div id="t"></div>
+    <div id="top">
+        <a href="#t"><img src="image/top.png" ></a>
+    </div>
+
+    <!-- header -->
+    <header>
+
+        <!-- header左半部(logo/nav) -->
+        <div div class="header">
+            <a href="./Index.html">
+                <img src="image/logo.png" style="width: 150px; height: 60px; margin-right: 30px;">
+            </a>           
+        
+        <div class="nav_main" >
+                <div class="nav">
+                    <a href="./Index.html">
+                        <img src="image/icon_home.png" >
+                        <p>首 頁</p>
+                    </a>                        
+                </div>
+                <div class="nav">
+                    <a href="./product_all.html">
+                    <img src="image/icon_touch.png" >
+                        <p1>商品一覽</p1>  
+                    </a>                        
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 右半部(line/購物車/會員) -->
+        <div div class="header">
+            <div class="nav_main">
+                <div class="nav2">
+                    <a href="https://lin.ee/HgVNDFW"><img src="image/icon_line.png" ></a>
+                </div>
+                <div class="nav2">
+                    <a href="./cart.html"><img src="image/icon_cart.png" ></a>
+            </div>
+                <div class="nav2">
+                    <a href="./login.html">登入</a>
+                </div>
+                <div class="nav2">
+                    <a href="./register.html">註冊</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 路徑 -->
+    <div class="path">
+            <a href="./Index.html" >首頁</a>
+            <p> > </p>
+            <a href="./product_all.html" >商品一覽</a>
+            <p> > </p>
+            <a href="./product_all.html" id="Brand">1</a>
+            <p> > </p>
+            <a href="" id="ItemName">1</a>
+    </div>
+
+
+    <!-- 商品概觀/加入購物車 -->
+    <div id="main">
+
+        <!-- 商品概觀 -->
+        <div>
+        </div>
+
+        <!-- 加入購物車 -->
+        <div id="cart">
+            
+            <div>
+              <h1 class="Brand">【 <div id="Brand2"></div> 】</h1>
+              <h1 style="padding: 10px;" id="ItemName2"> iPhone 15 PRO MAX</h1>
+            </div>
+
+            <div>
+                <h4>【商品規格】</h4>
+            </div>
+
+            <form action="" id="AddCartForm">
+                <div id="choice">
+                    <div id="radio" >
+                        <p>顏色</p>
+                        <div id="colorOptions">
+                            
+
+                        </div>
+                    </div>
+                    
+                    <div id="radio" >
+                        <p id="p">儲存空間</p>
+                        <div id="SpaceOptions">
+                            
+
+                        </div>
+                    </div>
+                        
+                    <p>數量</p>
+                        <div>
+                            <div class="numbox">
+                                <button class="min" type="button" onclick="opera('val', false);"> - </button>
+                                <input class="num" type="number" id="val" value="1"/>
+                                <button class="plus" type="button" onclick="opera('val', true);"> + </button>
+                            </div>
+                
+                            <script type="text/javascript">
+                                function opera(x, y) {
+                                    var rs = new Number(document.getElementById(x).value);
+                                    
+                                    if (y) {
+                                        document.getElementById(x).value = rs + 1;
+                                    } else if( rs >1) {
+                                        document.getElementById(x).value = rs - 1;
+                                    }
+                                    
+                                }
+
+                            </script>
+                            
+                        </div> 
+                </div>                
+
+                <div id="price">
+                    <h2>單價：</h2>
+                    <div id="price">
+                        <h3 >$ <div id="ItemPrice"></div></h3>
+                    </div>                    
+                    <input type="submit" value="加入購物車" id="submit">
+                </div>    
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- 產品介紹 -->
+    <div class="introduce">
+
+        <div class="introduce_title">
+            <img src="image/icon_dots.png" >
+            <p>商品介紹</p>
+            <img src="image/icon_dots.png" >
+        </div>
+
+        <div id="introduce_photo">
+            
+        </div>
+
+    </div>
+
+    <!-- 詳細規格 -->
+    <div class="introduce">
+
+        <div class="introduce_title">
+            <img src="image/icon_dots.png" >
+            <p>詳細規格</p>
+            <img src="image/icon_dots.png" >
+        </div>
+
+        <div id="detailed">
+            
+        </div>
+
+    </div>
+
+
+    <!-- Q&A -->
+    <div class="introduce">
+
+        <div class="introduce_title">
+            <img src="image/icon_dots.png" >
+            <p>Q&A</p>
+            <img src="image/icon_dots.png" >
+        </div>
+
+        <div id="Q_A">
+
+            <div id="create">
+
+               <div id="create_title">
+                    <img src="image/pen.png" id="logo" style="width: 40px; height: 40px; margin:0px 10px;">
+                    <h3>新增提問留言</h3>
+                </div>       
+
+                <form id="QAForm">
+                    <textarea name="mytext" rows="5" cols="40" id="create_text" placeholder="請輸入提問內容"></textarea>
+                    <input  type="submit" value="送出留言">
+                </form>
+                
+
+            </div>     
+            
+            <div id="allQA_title">
+                <img src="image/Line_L.png" >
+                <p style="padding: 10px 10px;">所有留言</p>
+                <img src="image/Line_R.png" >
+            </div>
+
+            <div>           
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <p>@2024手機樂園股份有限公司版權所有</p>
+    </footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/Product_Format.js"></script>
+</body>
+
+</html>
